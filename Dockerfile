@@ -1,4 +1,4 @@
-FROM felixkazuya/base-image
+FROM felixkazuyadev/base-image
 MAINTAINER Felix Kazuya <me@felixkazuya.de>
 MAINTAINER Christian Walonka <cwalonka@it-economics.de>
 ENV REFRESHED_AT 2019-03-04
