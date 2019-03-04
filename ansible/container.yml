@@ -1,0 +1,11 @@
+---
+- name: Provisioning container
+  hosts: all
+  vars:
+    dockerized: true
+
+  roles:
+## tbd    
+
+  tasks:
+## tbd

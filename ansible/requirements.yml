@@ -1,0 +1,4 @@
+- src: ssh://<<giturl>>
+  scm: git
+  version: master
+ 
