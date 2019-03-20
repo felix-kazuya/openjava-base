@@ -14,14 +14,6 @@ mkdir -p /usr/share/java/ && \
 cp $tmpfolder/mysql-connector-java-*/mysql-connector-java-*bin.jar /usr/share/java/mysql-connector-java.jar && \
 rm -rf $tmpfolder
 
-# Add app specific ansible files
-COPY ansible /srv/ansible
-
-# Add generic ansible roles
-#WORKDIR /srv/ansible
-#RUN ansible-galaxy install -r ansible/requirements.yml -p ansible/roles
-#RUN ansible-playbook container.yml -c local
-
 WORKDIR /
 
 CMD [ "/bin/bash"]
