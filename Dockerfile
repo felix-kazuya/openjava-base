@@ -14,6 +14,10 @@ mkdir -p /usr/share/java/ && \
 cp $tmpfolder/mysql-connector-java-*/mysql-connector-java-*bin.jar /usr/share/java/mysql-connector-java.jar && \
 rm -rf $tmpfolder
 
+RUN wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem -P /usr/share/ca-certificates && \
+chmod 0755 /usr/share/ca-certificates/rds-combined-ca-bundle.pem && \
+echo "rds-combined-ca-bundle.pem" >> /etc/ca-certificates.conf && update-ca-certificates
+
 WORKDIR /
 
 CMD [ "/bin/bash"]
